@@ -19,6 +19,11 @@
 		2772F6BF1987D97400DC2D9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2772F6A71987D97400DC2D9F /* UIKit.framework */; };
 		2772F6C71987D97400DC2D9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2772F6C51987D97400DC2D9F /* InfoPlist.strings */; };
 		2772F6C91987D97400DC2D9F /* TacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2772F6C81987D97400DC2D9F /* TacTests.m */; };
+		2772F6D51987DC2500DC2D9F /* TTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2772F6D41987DC2500DC2D9F /* TTTViewController.m */; };
+		2772F6D91987DD4400DC2D9F /* TTTTouchSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 2772F6D81987DD4400DC2D9F /* TTTTouchSpot.m */; };
+		27B0BB37198829230086F9FE /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B0BB34198829230086F9FE /* circle.png */; };
+		27B0BB38198829230086F9FE /* spot.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B0BB35198829230086F9FE /* spot.png */; };
+		27B0BB39198829230086F9FE /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27B0BB36198829230086F9FE /* x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,13 @@
 		2772F6C41987D97400DC2D9F /* TacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TacTests-Info.plist"; sourceTree = "<group>"; };
 		2772F6C61987D97400DC2D9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2772F6C81987D97400DC2D9F /* TacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TacTests.m; sourceTree = "<group>"; };
+		2772F6D31987DC2500DC2D9F /* TTTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTViewController.h; sourceTree = "<group>"; };
+		2772F6D41987DC2500DC2D9F /* TTTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTViewController.m; sourceTree = "<group>"; };
+		2772F6D71987DD4400DC2D9F /* TTTTouchSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTouchSpot.h; sourceTree = "<group>"; };
+		2772F6D81987DD4400DC2D9F /* TTTTouchSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTouchSpot.m; sourceTree = "<group>"; };
+		27B0BB34198829230086F9FE /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		27B0BB35198829230086F9FE /* spot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spot.png; sourceTree = "<group>"; };
+		27B0BB36198829230086F9FE /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,10 @@
 		2772F6971987D97400DC2D9F = {
 			isa = PBXGroup;
 			children = (
+				27B0BB34198829230086F9FE /* circle.png */,
+				27B0BB35198829230086F9FE /* spot.png */,
+				27B0BB36198829230086F9FE /* x.png */,
+				2772F6D21987DC0900DC2D9F /* Controllers */,
 				2772F6A91987D97400DC2D9F /* Tac */,
 				2772F6C21987D97400DC2D9F /* TacTests */,
 				2772F6A21987D97400DC2D9F /* Frameworks */,
@@ -142,6 +158,25 @@
 				2772F6C51987D97400DC2D9F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2772F6D21987DC0900DC2D9F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2772F6D31987DC2500DC2D9F /* TTTViewController.h */,
+				2772F6D41987DC2500DC2D9F /* TTTViewController.m */,
+				2772F6D61987DD0D00DC2D9F /* Views */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2772F6D61987DD0D00DC2D9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2772F6D71987DD4400DC2D9F /* TTTTouchSpot.h */,
+				2772F6D81987DD4400DC2D9F /* TTTTouchSpot.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B0BB37198829230086F9FE /* circle.png in Resources */,
+				27B0BB38198829230086F9FE /* spot.png in Resources */,
+				27B0BB39198829230086F9FE /* x.png in Resources */,
 				2772F6AE1987D97400DC2D9F /* InfoPlist.strings in Resources */,
 				2772F6B61987D97400DC2D9F /* Images.xcassets in Resources */,
 			);
@@ -240,7 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2772F6D51987DC2500DC2D9F /* TTTViewController.m in Sources */,
 				2772F6B01987D97400DC2D9F /* main.m in Sources */,
+				2772F6D91987DD4400DC2D9F /* TTTTouchSpot.m in Sources */,
 				2772F6B41987D97400DC2D9F /* TTTAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +478,7 @@
 				2772F6CE1987D97400DC2D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2772F6CF1987D97400DC2D9F /* Build configuration list for PBXNativeTarget "TacTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +487,7 @@
 				2772F6D11987D97400DC2D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

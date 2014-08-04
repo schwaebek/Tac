@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>18853EC5-7618-4852-97B3-9C6682647161</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Tac</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E650EC1B-1C64-4FF4-97DA-E0ECCEC3BAE3</key>
+		<string>https://github.com/schwaebek/iOSbabyapps.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E650EC1B-1C64-4FF4-97DA-E0ECCEC3BAE3</key>
+		<string>../../../../iOSbabyapps</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/schwaebek/iOSbabyapps.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E650EC1B-1C64-4FF4-97DA-E0ECCEC3BAE3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E650EC1B-1C64-4FF4-97DA-E0ECCEC3BAE3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSbabyapps</string>
+		</dict>
+	</array>
+</dict>
+</plist>
