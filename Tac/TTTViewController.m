@@ -8,6 +8,7 @@
 
 #import "TTTViewController.h"
 #import "TTTTouchSpot.h"
+#import "TTTGameData.h"
 
 
 @interface TTTViewController () <UIAlertViewDelegate>
@@ -15,22 +16,17 @@
 @end
 
 @implementation TTTViewController
-{
-    NSMutableArray * spots;
-    BOOL  player1Turn;
-    
-}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        spots = [@[] mutableCopy];
-        player1Turn = YES;
+       
     }
     return self;
-}
+}\
 
 - (void)viewDidLoad
 {
@@ -55,7 +51,7 @@
         
         spot.player = 0;
         [self.view addSubview:spot];
-        [spots addObject:spot];
+        [[TTTGameData mainData].spots addObject:spot];
         
         //run for each col in each row
     }
@@ -70,7 +66,7 @@
     
     int spotWH = 60;
     
-    for (TTTTouchSpot * spot in spots)
+    for (TTTTouchSpot * spot in [TTTGameData mainData].spots)
     {
         CGPoint location = [touch locationInView:spot];
         // x >= 0
@@ -87,9 +83,9 @@
                     if (spot.player == 0)
 //                    { UIColor * color = (player1Turn) ? [UIColor cyanColor] :[UIColor magentaColor];
 //                        spot.backgroundColor = color;
-                        spot.player = (player1Turn) ? 1 : 2;
-                        player1Turn = !player1Turn;
-                        [self checkForWinner];
+                        spot.player = ([TTTGameData mainData].player1Turn) ? 1 : 2;
+                       [TTTGameData mainData]. player1Turn = ![TTTGameData mainData].player1Turn;
+                        [[TTTGameData mainData] checkForWinner];
                     }
                 }
                  //spot touched
@@ -104,63 +100,8 @@
 
 
     
-- (void) checkForWinner
-{
-    NSArray * possibilities = @[
-                                @[@0,@1,@2],
-                                @[@3,@4,@5],
-                                @[@6,@7,@8],
-                                @[@0,@3,@6],
-                                @[@1,@4,@7],
-                                @[@2,@5,@8],
-                                @[@0,@4,@8],
-                                @[@2,@4,@6],
-                                ];
-    
-    BOOL winner = NO;
-    
-    for (NSArray * possibility in possibilities)
-    {
-        
-    
-    
-    TTTTouchSpot * spot0 = spots[[possibility [0] intValue]];
-    TTTTouchSpot * spot1 = spots[[possibility [1] intValue]];
-    TTTTouchSpot * spot2 = spots[[possibility [2] intValue]];
-  
-                                 
-    if (spot0.player == spot1.player && spot1.player == spot2.player && spot0.player != 0)
-            {
-                winner = YES;
-                    NSLog(@"player %d won", spot0.player);
-                
-                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Winner" message:[NSString stringWithFormat:@"Player %d Won", spot0.player] delegate:self cancelButtonTitle:@"Start Over" otherButtonTitles: nil];
-                [alert show];
-                
-            }
-    }
-    int emptySpots = 0;
-    for (TTTTouchSpot * spot in spots)
-    {
-        if (spot.player == 0)
-        {
-            emptySpots++;
-        }
-    }
-    if (emptySpots == 0 && !winner)
-    {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Draw" message:@"YOU'RE BOTH LOSERS." delegate:self cancelButtonTitle:@"Start Over" otherButtonTitles: nil];
-        [alert show];
-    }
-}
 //    if ([spot0.backgroundColor isEqual:spot1.backgroundColor] && [spot1.backgroundColor isEqual:spot2.backgroundColor])
-- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    for (TTTTouchSpot * spot in spots)
-    {
-        spot.player = 0;
-    }
-}
+
 
     
 - (void)didReceiveMemoryWarning

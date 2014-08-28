@@ -10,20 +10,26 @@
 	<string>Tac</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>D407218011D576CD98DAF0EF0209234B429EB9AB</key>
+		<string>https://github.com/schwaebek/Tac.git</string>
 		<key>E650EC1B-1C64-4FF4-97DA-E0ECCEC3BAE3</key>
 		<string>https://github.com/schwaebek/iOSbabyapps.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Tac/Tac.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>D407218011D576CD98DAF0EF0209234B429EB9AB</key>
+		<string>../../..</string>
 		<key>E650EC1B-1C64-4FF4-97DA-E0ECCEC3BAE3</key>
 		<string>../../../../iOSbabyapps</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/schwaebek/iOSbabyapps.git</string>
+	<string>https://github.com/schwaebek/Tac.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E650EC1B-1C64-4FF4-97DA-E0ECCEC3BAE3</string>
+	<string>D407218011D576CD98DAF0EF0209234B429EB9AB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -33,6 +39,14 @@
 			<string>E650EC1B-1C64-4FF4-97DA-E0ECCEC3BAE3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOSbabyapps</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D407218011D576CD98DAF0EF0209234B429EB9AB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Tac</string>
 		</dict>
 	</array>
 </dict>

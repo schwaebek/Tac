@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275BF72619AF75380043B86E /* TTTGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 275BF72519AF75380043B86E /* TTTGameData.m */; };
 		2772F6A41987D97400DC2D9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2772F6A31987D97400DC2D9F /* Foundation.framework */; };
 		2772F6A61987D97400DC2D9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2772F6A51987D97400DC2D9F /* CoreGraphics.framework */; };
 		2772F6A81987D97400DC2D9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2772F6A71987D97400DC2D9F /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		275BF72419AF75380043B86E /* TTTGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTGameData.h; sourceTree = "<group>"; };
+		275BF72519AF75380043B86E /* TTTGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTGameData.m; sourceTree = "<group>"; };
 		2772F6A01987D97400DC2D9F /* Tac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2772F6A31987D97400DC2D9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2772F6A51987D97400DC2D9F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,17 +89,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275BF72719AF75970043B86E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				27B0BB36198829230086F9FE /* x.png */,
+				27B0BB35198829230086F9FE /* spot.png */,
+				27B0BB34198829230086F9FE /* circle.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		2772F6971987D97400DC2D9F = {
 			isa = PBXGroup;
 			children = (
-				27B0BB34198829230086F9FE /* circle.png */,
-				27B0BB35198829230086F9FE /* spot.png */,
-				27B0BB36198829230086F9FE /* x.png */,
+				275BF72419AF75380043B86E /* TTTGameData.h */,
+				275BF72519AF75380043B86E /* TTTGameData.m */,
 				2772F6D21987DC0900DC2D9F /* Controllers */,
 				2772F6A91987D97400DC2D9F /* Tac */,
 				2772F6C21987D97400DC2D9F /* TacTests */,
 				2772F6A21987D97400DC2D9F /* Frameworks */,
 				2772F6A11987D97400DC2D9F /* Products */,
+				275BF72719AF75970043B86E /* Images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275BF72619AF75380043B86E /* TTTGameData.m in Sources */,
 				2772F6D51987DC2500DC2D9F /* TTTViewController.m in Sources */,
 				2772F6B01987D97400DC2D9F /* main.m in Sources */,
 				2772F6D91987DD4400DC2D9F /* TTTTouchSpot.m in Sources */,
