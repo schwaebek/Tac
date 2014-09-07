@@ -130,8 +130,6 @@
 }
 -(void) checkForWinner
 {
-    
-    
     BOOL winner = NO;
     
     for (NSArray * possibility in possibilities)
@@ -146,8 +144,17 @@
             winner = YES;
             NSLog(@"player %d won", spot0.player);
             
-            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Winner" message:[NSString stringWithFormat:@"Player %d Won", spot0.player] delegate:self cancelButtonTitle:@"Start Over" otherButtonTitles: nil];
-            [alert show];
+            UIView * winner = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+            winner.layer.cornerRadius = 10;
+            winner.layer.borderWidth = 2.0;
+            winner.layer.borderColor = [[UIColor blackColor]CGColor];
+            winner.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"x"]];
+        
+            
+            
+            
+//            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Winner" message:[NSString stringWithFormat:@"Player %d Won", spot0.player] delegate:self cancelButtonTitle:@"Start Over" otherButtonTitles: nil];
+//            [alert show];
             
         }
     }
@@ -165,7 +172,7 @@
         [alert show];
     }
 }
-- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     self.player1Turn = YES;
     for (TTTTouchSpot * spot in self.spots)
